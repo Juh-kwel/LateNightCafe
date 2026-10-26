@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ja'Quel Williams">
+    <title>Midnight Café | Coffee, Comfort Food, and Late-Night Jazz</title>
+    <style>
+        /* Universal selector */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Type selector also this gradient thing took forever to figure out */
+        body {
+            margin: 1% 2%;
+            color: #f4ead8;
+            background: linear-gradient(180deg, #19152f 0%, #211a36 48%, #392516 100%);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        header {
+            padding: 3rem 1.5rem;
+            background-image: linear-gradient(rgba(18, 15, 30, 0.42), rgba(18, 15, 30, 0.9)), url("Jazz & Soul Vibes _ Vintage Afrocentric Apparel _ Scenetee.jpg");
+            background-repeat: no-repeat;
+            background-position: center 48%;
+            background-size: cover;
+            border: 1px solid #a9865b;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            color: #fff1d7;
+            font-size: 2.8rem;
+            letter-spacing: 0.08em;
+        }
+
+        h2 {
+            color: #e6c59a;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        header > p {
+            margin: 0.3rem 0;
+            font-size: 1.15rem;
+        }
+
+        nav {
+            padding: 0.8rem;
+            background-color: #151326;
+            text-align: center;
+        }
+
+        /* Descendant selector */
+        nav a {
+            margin: 0 0.55rem;
+        }
+
+        /* Class selector */
+        .warm-link {
+            color: #f4ead8;
+            text-decoration: underline;
+        }
+
+        a {
+            color: #f1cb91;
+        }
+
+        a:hover { /* I think this changes color when hovering over link*/
+            color: #ffffff;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        section {
+            padding: 1.25rem 0;
+        }
+
+        /* ID selector */
+        #hours {
+            border-top: 1px solid #a9865b;
+        }
+
+        /* Child selector */
+        section > h2 {
+            border-bottom: 1px solid #8b6b4d;
+            padding-bottom: 0.3rem;
+        }
+
+        .featured-special {
+            margin: 1rem 0;
+            padding: 1rem;
+            border: 2px solid #d0aa77;
+            background-color: rgba(33, 26, 54, 0.82);
+        }
+
+        .featured-special strong {
+            color: #ffe0a9;
+        }
+
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: rgba(20, 17, 34, 0.78);
+        }
+
+        .menu-table th,
+        .menu-table td {
+            padding: 0.7rem;
+            border: 1px solid #a9865b;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .menu-table thead {
+            background-color: #51402f;
+            color: #fff1d7;
+        }
+
+        .menu-table img {
+            width: 76px;
+            height: auto;
+            border: 1px solid #d0aa77;
+            vertical-align: middle;
+        }
+
+        .drink-table img {
+            display: block;
+            width: 120px;
+            max-width: 100%;
+            height: 100px;
+            margin-bottom: 0.4rem;
+            border: 1px solid #d0aa77;
+            object-fit: cover;
+        }
+
+        figure {
+            margin: 1rem 0;
+        }
+
+        figure img {
+            width: 190px;
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #d0aa77;
+        }
+
+        figcaption {
+            color: #d7c4a5;
+            font-size: 0.9rem;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        .steps {
+            list-style-type: decimal;
+        }
+
+        .highlight {
+            padding: 0.1rem 0.35rem;
+            background-color: #614831;
+            color: #fff1d7;
+        }
+
+        footer {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border-top: 1px solid #a9865b;
+            text-align: center;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #a9865b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Midnight Café</h1>
+        <p>Late-night coffee, comfort food, and soul.</p>
+        <p><em>Stay a little longer. Let the music play.</em></p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <!-- The inline #f1cb91 color appears because inline styles take precedence over the .warm-link color. -->
+        <a class="warm-link" style="color: #f1cb91;" href="#food">Food menu</a>
+        <a class="warm-link" href="#drinks">Drink menu</a>
+        <a class="warm-link" href="#hours">Hours</a>
+        <a class="warm-link" href="#about">About us</a>
+    </nav>
+
+    <main>
+        <section id="food">
+            <h2>Food menu</h2>
+            <p>Our herb-baked chicken plate is a homestyle favorite, served with rice and seasonal vegetables.</p>
+
+            <div class="featured-special">
+                <p><strong>Exam-week special:</strong> Students get <strong>15% off</strong> Monday through Friday during midterm and final exam weeks. Bring your student ID.</p>
+            </div>
+
+            <table class="menu-table">
+                <caption>Late-night plates</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="bakedChicken.png" alt="Herb-baked chicken with rice and seasonal vegetables"> After-Hours Baked Chicken</td>
+                        <td>Herb-baked chicken with rice and seasonal vegetables. <a href="#drinks">Pair it with a drink.</a></td>
+                        <td>$13.50</td>
+                    </tr>
+                    <tr>
+                        <td>Midnight Steak Bowl</td>
+                        <td>Sliced steak over rice with roasted vegetables.</td>
+                        <td>$16.00</td>
+                    </tr>
+                    <tr>
+                        <td>Slow-Simmered Chicken Soup</td>
+                        <td>Chicken and garden vegetables in a cozy broth.</td>
+                        <td>$9.50</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Ask us about ingredients and allergens; a glass of H<sub>2</sub>O is always available.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <figure>
+                <img src="bakedChicken.png" alt="A fresh herb-baked chicken plate, one of the café's late-night meals">
+                <figcaption>Herb-baked chicken, made for a cozy night at the café.</figcaption>
+            </figure>
+        </section>
+
+        <hr>
+
+        <section id="drinks">
+            <h2>Drink menu</h2>
+            <ul>
+                <li>Hot coffee — $3.00</li>
+                <li>Latte — $5.25</li>
+                <li>Cold Brew — $4.25</li>
+                <li> We Also Have Sweet Tea!!! </li>
+            </ul>
+            <table class="menu-table drink-table">
+                <caption>Featured drinks and how they're prepared</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Drink</th>
+                        <th scope="col">How it's prepared</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="hotCoffee.jpg" alt="A cup of freshly brewed black coffee">Hot coffee</td>
+                        <td>Freshly ground coffee beans are brewed with hot water and served steaming.</td>
+                    </tr>
+                    <tr>
+                        <td><img src="latte_art.jpg" alt="A latte topped with leaf-shaped latte art">Latte</td>
+                        <td>Espresso is topped with steamed milk, then finished with latte art.</td>
+                    </tr>
+                    <tr>
+                        <td><img src="Cold_brew.jpg" alt="A glass of iced cold brew coffee">Cold brew</td>
+                        <td>Coarsely ground coffee is steeped in cold water and served over ice.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>For calories and basic macronutrient information, visit <a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener noreferrer">USDA FoodData Central</a>. For general caffeine information, see the <a href="https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much" target="_blank" rel="noopener noreferrer">FDA's caffeine guidance</a>; caffeine varies by recipe and serving size.</p>
+            <p><span class="highlight">A warm cup and a good record</span> make the night feel easy.</p>
+        </section>
+
+        <hr>
+
+        <section id="hours">
+            <h2>Hours of operation</h2>
+            <p>We're open daily from <strong>4:00 p.m. to 2:00 a.m.</strong> Find us at 117 SR-81 N, Tuskegee, AL 36083.<br>Live music fills the room Thursday through Saturday.</p>
+        </section>
+
+        <section id="about">
+            <h2>About us</h2>
+            <p>By day, the city moves fast; after sunset, Midnight Café makes room to slow down. Come for familiar food and drinks, stay for the warm lights and a little jazz.</p>
+            <ul>
+                <li>Late-night comfort food
+                    <ul>
+                        <li>Homestyle chicken and steak plates</li>
+                        <li>Vegetable sides and slow-simmered soup</li>
+                    </ul>
+                </li>
+                <li>Hot drinks and cool treats</li>
+                <li>Live jazz Thursday through Saturday evenings, 8:00–11:00 p.m.; arrive early for a good seat.</li>
+            </ul>
+            <h3>How to enjoy a visit</h3>
+            <ol class="steps">
+                <li>Choose a plate or drink from the menus.</li>
+                <li>Order with the café team at the counter.</li>
+                <li>Pick up your order and find a cozy seat.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by Ja'Quel Williams &copy; 2026</p>
+        <p><a href="credits.html">Image credits</a></p>
+    </footer>
+</body>
+</html>
